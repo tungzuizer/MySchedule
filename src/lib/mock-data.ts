@@ -1,0 +1,423 @@
+// ============================================================
+// USER
+// ============================================================
+export const MOCK_USER = {
+  name: "Nguyễn Minh Tuấn",
+  email: "tuan@example.com",
+  goal: "Lãnh đạo & Phát triển Sản phẩm",
+  timeAvailable: "10 giờ/tuần",
+  level: "Trung cấp",
+  progress: 35,
+  streak: 7,
+  completedTasks: 18,
+  skills: ["leadership", "teamwork"],
+};
+
+// ============================================================
+// SKILLS CATEGORIES
+// ============================================================
+export const SKILL_CATEGORIES = [
+  { id: "all", label: "Tất cả" },
+  { id: "leadership", label: "Lãnh đạo" },
+  { id: "community", label: "Cộng đồng" },
+  { id: "technical", label: "Kỹ thuật" },
+  { id: "professional", label: "Chuyên nghành" },
+  { id: "soft", label: "Kỹ năng mềm" },
+];
+
+export const MOCK_SKILLS = [
+  {
+    id: "leadership",
+    title: "Lãnh đạo & Quản lý",
+    category: "leadership",
+    icon: "🏆",
+    description: "Phát triển tư duy lãnh đạo, quản lý đội nhóm hiệu quả và xây dựng tầm nhìn chiến lược cho tổ chức.",
+    level: "Trung cấp → Nâng cao",
+    duration: "3 tháng",
+    phases: 4,
+    enrolledCount: 1240,
+    rating: 4.9,
+    coachId: "coach-1",
+    organizationIds: ["org-mci"],
+    tags: ["Quản lý đội nhóm", "Tư duy chiến lược", "Ra quyết định"],
+    color: "from-amber-500 to-orange-500",
+    bgColor: "bg-amber-50 dark:bg-amber-950/30",
+    textColor: "text-amber-700 dark:text-amber-300",
+    borderColor: "border-amber-200 dark:border-amber-800",
+  },
+  {
+    id: "teamwork",
+    title: "Làm việc nhóm",
+    category: "soft",
+    icon: "🤝",
+    description: "Xây dựng kỹ năng hợp tác, giao tiếp trong nhóm và giải quyết xung đột một cách chuyên nghiệp.",
+    level: "Cơ bản → Trung cấp",
+    duration: "6 tuần",
+    phases: 3,
+    enrolledCount: 2100,
+    rating: 4.8,
+    coachId: "coach-2",
+    organizationIds: ["org-luk"],
+    tags: ["Giao tiếp", "Giải quyết xung đột", "Hợp tác"],
+    color: "from-blue-500 to-cyan-500",
+    bgColor: "bg-blue-50 dark:bg-blue-950/30",
+    textColor: "text-blue-700 dark:text-blue-300",
+    borderColor: "border-blue-200 dark:border-blue-800",
+  },
+  {
+    id: "community",
+    title: "Kỹ năng cộng đồng",
+    category: "community",
+    icon: "🌱",
+    description: "Học cách kết nối, xây dựng và phát triển cộng đồng. Tạo ra sức ảnh hưởng tích cực trong xã hội.",
+    level: "Cơ bản → Nâng cao",
+    duration: "2 tháng",
+    phases: 3,
+    enrolledCount: 890,
+    rating: 4.7,
+    coachId: "coach-3",
+    organizationIds: ["org-makerviet", "org-luk"],
+    tags: ["Xây dựng cộng đồng", "Truyền thông", "Networking"],
+    color: "from-green-500 to-emerald-500",
+    bgColor: "bg-green-50 dark:bg-green-950/30",
+    textColor: "text-green-700 dark:text-green-300",
+    borderColor: "border-green-200 dark:border-green-800",
+  },
+  {
+    id: "ai-tech",
+    title: "AI & Công nghệ",
+    category: "technical",
+    icon: "🤖",
+    description: "Nắm vững các công cụ AI, lập trình Python cơ bản và ứng dụng AI vào công việc thực tế.",
+    level: "Cơ bản → Trung cấp",
+    duration: "3 tháng",
+    phases: 4,
+    enrolledCount: 3200,
+    rating: 4.9,
+    coachId: "coach-4",
+    organizationIds: ["org-makerviet"],
+    tags: ["Python", "Machine Learning", "Prompt Engineering"],
+    color: "from-purple-500 to-violet-500",
+    bgColor: "bg-purple-50 dark:bg-purple-950/30",
+    textColor: "text-purple-700 dark:text-purple-300",
+    borderColor: "border-purple-200 dark:border-purple-800",
+  },
+  {
+    id: "entrepreneurship",
+    title: "Khởi nghiệp & Kinh doanh",
+    category: "professional",
+    icon: "🚀",
+    description: "Từ ý tưởng đến sản phẩm: xây dựng business model, pitch deck và chiến lược go-to-market.",
+    level: "Trung cấp → Nâng cao",
+    duration: "4 tháng",
+    phases: 5,
+    enrolledCount: 760,
+    rating: 4.8,
+    coachId: "coach-1",
+    organizationIds: ["org-mci", "org-makerviet"],
+    tags: ["Business Model", "Startup", "Pitch Deck"],
+    color: "from-rose-500 to-pink-500",
+    bgColor: "bg-rose-50 dark:bg-rose-950/30",
+    textColor: "text-rose-700 dark:text-rose-300",
+    borderColor: "border-rose-200 dark:border-rose-800",
+  },
+  {
+    id: "communication",
+    title: "Giao tiếp chuyên nghiệp",
+    category: "soft",
+    icon: "💬",
+    description: "Nâng cao kỹ năng thuyết trình, viết lách chuyên nghiệp và giao tiếp trong môi trường doanh nghiệp.",
+    level: "Cơ bản → Trung cấp",
+    duration: "6 tuần",
+    phases: 3,
+    enrolledCount: 1580,
+    rating: 4.6,
+    coachId: "coach-2",
+    organizationIds: ["org-luk"],
+    tags: ["Thuyết trình", "Viết báo cáo", "Public Speaking"],
+    color: "from-teal-500 to-cyan-500",
+    bgColor: "bg-teal-50 dark:bg-teal-950/30",
+    textColor: "text-teal-700 dark:text-teal-300",
+    borderColor: "border-teal-200 dark:border-teal-800",
+  },
+  {
+    id: "product-management",
+    title: "Quản lý Sản phẩm",
+    category: "professional",
+    icon: "📱",
+    description: "Học cách xây dựng lộ trình sản phẩm, làm việc với engineers & designers và ra mắt sản phẩm thành công.",
+    level: "Trung cấp",
+    duration: "3 tháng",
+    phases: 4,
+    enrolledCount: 940,
+    rating: 4.9,
+    coachId: "coach-5",
+    organizationIds: ["org-mci"],
+    tags: ["Product Roadmap", "Agile", "User Research"],
+    color: "from-indigo-500 to-blue-500",
+    bgColor: "bg-indigo-50 dark:bg-indigo-950/30",
+    textColor: "text-indigo-700 dark:text-indigo-300",
+    borderColor: "border-indigo-200 dark:border-indigo-800",
+  },
+  {
+    id: "design-thinking",
+    title: "Tư duy Thiết kế",
+    category: "professional",
+    icon: "🎨",
+    description: "Áp dụng Design Thinking để giải quyết vấn đề sáng tạo, đồng cảm với người dùng và xây dựng giải pháp tốt hơn.",
+    level: "Cơ bản → Trung cấp",
+    duration: "2 tháng",
+    phases: 3,
+    enrolledCount: 670,
+    rating: 4.7,
+    coachId: "coach-3",
+    organizationIds: ["org-makerviet"],
+    tags: ["Empathy Map", "Prototyping", "User Testing"],
+    color: "from-fuchsia-500 to-purple-500",
+    bgColor: "bg-fuchsia-50 dark:bg-fuchsia-950/30",
+    textColor: "text-fuchsia-700 dark:text-fuchsia-300",
+    borderColor: "border-fuchsia-200 dark:border-fuchsia-800",
+  },
+];
+
+// ============================================================
+// COACHES
+// ============================================================
+export const MOCK_COACHES = [
+  {
+    id: "coach-1",
+    name: "Trần Minh Khoa",
+    title: "Chuyên gia Lãnh đạo & Chiến lược",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80",
+    specializations: ["leadership", "entrepreneurship"],
+    bio: "Hơn 15 năm kinh nghiệm lãnh đạo trong các công ty Fortune 500 và startup. Đã đào tạo hơn 500 nhà lãnh đạo trẻ tại Việt Nam.",
+    rating: 4.9,
+    reviewCount: 284,
+    sessionCount: 1200,
+    hourlyRate: 500000,
+    availability: ["Thứ 2", "Thứ 4", "Thứ 6"],
+    organization: "org-mci",
+    badge: "Top Coach",
+    badgeColor: "bg-amber-500",
+    linkedSkills: ["leadership", "entrepreneurship"],
+  },
+  {
+    id: "coach-2",
+    name: "Lê Thị Phương Anh",
+    title: "Chuyên gia Giao tiếp & Kỹ năng mềm",
+    avatar: "https://images.unsplash.com/photo-1494790108755-2616b9e677a8?auto=format&fit=crop&w=200&q=80",
+    specializations: ["teamwork", "communication"],
+    bio: "Diễn giả TEDx, huấn luyện viên NLP. Chuyên tư vấn kỹ năng giao tiếp và xây dựng đội nhóm hiệu suất cao.",
+    rating: 4.8,
+    reviewCount: 196,
+    sessionCount: 890,
+    hourlyRate: 400000,
+    availability: ["Thứ 3", "Thứ 5", "Thứ 7"],
+    organization: "org-luk",
+    badge: "Nổi bật",
+    badgeColor: "bg-blue-500",
+    linkedSkills: ["teamwork", "communication"],
+  },
+  {
+    id: "coach-3",
+    name: "Nguyễn Văn Hùng",
+    title: "Chuyên gia Cộng đồng & Social Impact",
+    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80",
+    specializations: ["community", "design-thinking"],
+    bio: "Sáng lập 3 cộng đồng lớn tại TP.HCM với hơn 10,000 thành viên. Chuyên gia về social entrepreneurship.",
+    rating: 4.7,
+    reviewCount: 142,
+    sessionCount: 560,
+    hourlyRate: 350000,
+    availability: ["Thứ 2", "Thứ 5", "Chủ nhật"],
+    organization: "org-makerviet",
+    badge: "Mới",
+    badgeColor: "bg-green-500",
+    linkedSkills: ["community", "design-thinking"],
+  },
+  {
+    id: "coach-4",
+    name: "Phạm Thanh Hà",
+    title: "AI Engineer & Tech Educator",
+    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80",
+    specializations: ["ai-tech"],
+    bio: "Senior AI Engineer tại Google Vietnam. Đã dạy hơn 2000 học viên về AI, Machine Learning và ứng dụng thực tế.",
+    rating: 4.9,
+    reviewCount: 312,
+    sessionCount: 1450,
+    hourlyRate: 600000,
+    availability: ["Thứ 3", "Thứ 6", "Thứ 7"],
+    organization: "org-makerviet",
+    badge: "Top Coach",
+    badgeColor: "bg-amber-500",
+    linkedSkills: ["ai-tech"],
+  },
+  {
+    id: "coach-5",
+    name: "Đỗ Quốc Bảo",
+    title: "Product Manager & Startup Mentor",
+    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80",
+    specializations: ["product-management"],
+    bio: "Ex-Product Manager tại Grab & VNG. Mentor tại Google for Startups. Chuyên gia về product strategy và growth hacking.",
+    rating: 4.9,
+    reviewCount: 178,
+    sessionCount: 720,
+    hourlyRate: 550000,
+    availability: ["Thứ 2", "Thứ 4", "Thứ 7"],
+    organization: "org-mci",
+    badge: "Chuyên gia",
+    badgeColor: "bg-purple-500",
+    linkedSkills: ["product-management"],
+  },
+];
+
+// ============================================================
+// ORGANIZATIONS
+// ============================================================
+export const MOCK_ORGANIZATIONS = [
+  {
+    id: "org-luk",
+    name: "LUK Vietnam",
+    shortName: "LUK",
+    description: "Tổ chức giáo dục phi lợi nhuận tập trung phát triển kỹ năng mềm và lãnh đạo cho thế hệ trẻ Việt Nam.",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80",
+    skills: ["Kỹ năng mềm", "Giao tiếp", "Teamwork"],
+    website: "https://luk.org.vn",
+    partnerSince: "2022",
+    courseCount: 12,
+    studentCount: 5400,
+    color: "from-blue-500 to-indigo-500",
+  },
+  {
+    id: "org-makerviet",
+    name: "MakerViet",
+    shortName: "MakerViet",
+    description: "Cộng đồng Makers Việt Nam – kết nối, chia sẻ và phát triển các dự án sáng tạo công nghệ và xã hội.",
+    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80",
+    skills: ["AI", "Robotics", "Design Thinking"],
+    website: "https://makerviet.org",
+    partnerSince: "2023",
+    courseCount: 8,
+    studentCount: 2800,
+    color: "from-green-500 to-teal-500",
+  },
+  {
+    id: "org-mci",
+    name: "MCI Institute",
+    shortName: "MCI",
+    description: "Viện phát triển lãnh đạo và quản trị doanh nghiệp hàng đầu Đông Nam Á với hơn 20 năm kinh nghiệm.",
+    image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80",
+    skills: ["Lãnh đạo", "Quản lý", "Khởi nghiệp"],
+    website: "https://mci.edu.vn",
+    partnerSince: "2021",
+    courseCount: 18,
+    studentCount: 8900,
+    color: "from-amber-500 to-orange-500",
+  },
+];
+
+// ============================================================
+// ROADMAP
+// ============================================================
+export const MOCK_ROADMAP = {
+  title: "Lộ trình Lãnh đạo & Quản lý",
+  skillId: "leadership",
+  phases: [
+    {
+      id: 1,
+      title: "Giai đoạn 1: Nền tảng Lãnh đạo",
+      status: "completed",
+      completedDate: "15/04/2026",
+      tasks: [
+        { id: 101, title: "Giao tiếp liên phòng ban hiệu quả", type: "khóa học" },
+        { id: 102, title: "Xây dựng tầm nhìn sản phẩm", type: "dự án" },
+      ],
+    },
+    {
+      id: 2,
+      title: "Giai đoạn 2: Dẫn dắt Đội nhóm",
+      status: "in-progress",
+      tasks: [
+        { id: 201, title: "Giải quyết xung đột trong nhóm", type: "tình huống" },
+        { id: 202, title: "Kỹ thuật họp nhóm hiệu quả", type: "thực hành" },
+      ],
+    },
+    {
+      id: 3,
+      title: "Giai đoạn 3: Mở rộng Tầm ảnh hưởng",
+      status: "locked",
+      tasks: [
+        { id: 301, title: "Mentoring đồng nghiệp junior", type: "thử thách" },
+        { id: 302, title: "Xây dựng văn hóa đội nhóm", type: "dự án" },
+      ],
+    },
+  ],
+};
+
+// ============================================================
+// SCHEDULE
+// ============================================================
+export const MOCK_SCHEDULE = [
+  {
+    day: "Thứ Hai",
+    date: "02/06",
+    tasks: [{ id: 1, title: "Đọc: Giải quyết xung đột", time: "09:00", duration: 45, type: "study" }],
+  },
+  {
+    day: "Thứ Tư",
+    date: "04/06",
+    tasks: [{ id: 2, title: "Buổi tư vấn với Coach Khoa", time: "17:00", duration: 60, type: "coaching" }],
+  },
+  {
+    day: "Thứ Sáu",
+    date: "06/06",
+    tasks: [{ id: 3, title: "Nộp: Tài liệu tầm nhìn", time: "23:59", duration: 30, type: "task" }],
+  },
+];
+
+// ============================================================
+// AI CHAT
+// ============================================================
+export const MOCK_COACH_CHAT = [
+  {
+    role: "ai",
+    content:
+      "Chào Tuấn! Tuần này bạn đã bỏ lỡ buổi đọc sách hôm thứ Hai. Bạn cảm thấy thế nào? Có cần tôi điều chỉnh lịch trình không?",
+  },
+  { role: "user", content: "Mình bận hơn dự kiến với công việc rồi." },
+  {
+    role: "ai",
+    content:
+      "Hoàn toàn hiểu được! Bạn có muốn tôi đẩy deadline 'Tài liệu tầm nhìn' sang thứ Tư tuần sau để bạn có thời gian nghỉ ngơi và bắt kịp không?",
+  },
+];
+
+// ============================================================
+// NOTIFICATIONS
+// ============================================================
+export const MOCK_NOTIFICATIONS = [
+  {
+    id: 1,
+    type: "reminder",
+    title: "Nhắc nhở nhiệm vụ",
+    message: "Buổi tư vấn với Coach Khoa bắt đầu sau 2 giờ",
+    time: "15:00",
+    read: false,
+  },
+  {
+    id: 2,
+    type: "achievement",
+    title: "Chúc mừng! 🎉",
+    message: "Bạn đã hoàn thành Giai đoạn 1 của lộ trình Lãnh đạo",
+    time: "Hôm qua",
+    read: false,
+  },
+  {
+    id: 3,
+    type: "coach",
+    title: "Tin nhắn từ Coach Phương Anh",
+    message: "Hãy xem tài liệu tôi gửi trước buổi học nhé!",
+    time: "2 giờ trước",
+    read: true,
+  },
+];
