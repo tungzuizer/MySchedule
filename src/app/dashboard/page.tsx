@@ -132,13 +132,11 @@ export default function DashboardPage() {
                       <div
                         key={task.id}
                         onClick={() => toggleTask(task.id)}
-                        className={`flex items-center gap-3 p-3 rounded-lg cursor-pointer transition-all border ${
-                          done ? "bg-primary/10 border-primary/30" : "bg-background border-border hover:border-primary/30"
-                        }`}
+                        className={`flex items-center gap-3 p-3 rounded-lg cursor-pointer transition-all border ${done ? "bg-primary/10 border-primary/30" : "bg-background border-border hover:border-primary/30"
+                          }`}
                       >
-                        <div className={`w-5 h-5 rounded-md border-2 flex items-center justify-center flex-shrink-0 transition-colors ${
-                          done ? "bg-primary border-primary" : "border-muted-foreground"
-                        }`}>
+                        <div className={`w-5 h-5 rounded-md border-2 flex items-center justify-center flex-shrink-0 transition-colors ${done ? "bg-primary border-primary" : "border-muted-foreground"
+                          }`}>
                           {done && (
                             <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
@@ -183,9 +181,8 @@ export default function DashboardPage() {
                     {day.tasks.map((task) => (
                       <div key={task.id} className="flex items-center justify-between bg-background border border-border p-3 rounded-xl hover:border-primary/40 transition-colors">
                         <div className="flex items-center gap-3">
-                          <div className={`w-2 h-2 rounded-full flex-shrink-0 ${
-                            task.type === "coaching" ? "bg-violet-500" : task.type === "study" ? "bg-blue-500" : "bg-amber-500"
-                          }`} />
+                          <div className={`w-2 h-2 rounded-full flex-shrink-0 ${task.type === "coaching" ? "bg-violet-500" : task.type === "study" ? "bg-blue-500" : "bg-amber-500"
+                            }`} />
                           <span className="text-sm font-medium">{task.title}</span>
                         </div>
                         <div className="flex items-center gap-2 flex-shrink-0">
@@ -282,24 +279,33 @@ export default function DashboardPage() {
             </div>
           </section>
 
-          {/* Partner Orgs */}
+          {/* Competitions & Mentors */}
           <section className="bg-card border border-border rounded-2xl p-5 shadow-sm">
             <div className="flex items-center justify-between mb-4">
-              <h2 className="font-bold">Đối tác</h2>
+              <h2 className="font-bold">🏆 Cuộc thi & Mentor</h2>
               <a href="/dashboard/organizations" className="text-xs text-primary hover:underline">Xem tất cả →</a>
             </div>
             <div className="space-y-2">
-              {MOCK_ORGANIZATIONS.map((org) => (
-                <a key={org.id} href="/dashboard/organizations" className="flex items-center gap-3 p-3 rounded-xl border border-border bg-background hover:border-primary/30 hover:shadow-sm transition-all cursor-pointer group">
-                  <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${org.color} flex items-center justify-center text-white font-black text-xs flex-shrink-0 shadow-sm`}>
-                    {org.shortName.slice(0, 3)}
+              {MOCK_ORGANIZATIONS.map((comp) => (
+                <a key={comp.id} href="/dashboard/organizations" className="flex items-center gap-3 p-3 rounded-xl border border-border bg-background hover:border-primary/30 hover:shadow-sm transition-all cursor-pointer group">
+                  <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${comp.color} flex items-center justify-center text-white font-black text-xs flex-shrink-0 shadow-sm`}>
+                    {comp.shortName.slice(0, 3)}
                   </div>
                   <div className="flex-1 min-w-0">
-                    <p className="text-sm font-semibold truncate">{org.name}</p>
-                    <p className="text-xs text-muted-foreground">{org.courseCount} khóa học</p>
+                    <p className="text-sm font-semibold truncate">{comp.name}</p>
+                    <p className="text-xs text-muted-foreground">{(comp as any).mentorCount} mentor · {(comp as any).level}</p>
                   </div>
+                  <span className="text-xs font-bold px-2 py-0.5 bg-primary/10 text-primary rounded-full whitespace-nowrap flex-shrink-0">
+                    {(comp as any).nextEvent}
+                  </span>
                 </a>
               ))}
+            </div>
+            <div className="mt-3 pt-3 border-t border-border">
+              <a href="/dashboard/organizations" className="flex items-center justify-center gap-1.5 text-xs font-semibold text-primary hover:underline">
+                Đăng ký Mentor ngay
+                <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+              </a>
             </div>
           </section>
         </div>
