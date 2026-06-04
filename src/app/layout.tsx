@@ -3,7 +3,7 @@ import "./globals.css";
 import ThemeToggle from "@/components/ThemeToggle";
 
 export const metadata: Metadata = {
-  title: "MySchedule | Nền tảng phát triển cá nhân hoá",
+  title: "LEAD | Nền tảng phát triển cá nhân hoá",
   description: "Lộ trình học tập cá nhân hoá bởi AI. Phát triển kỹ năng cùng coach chuyên gia và AI Coach.",
 };
 

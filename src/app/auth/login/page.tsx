@@ -38,12 +38,8 @@ export default function LoginPage() {
         {/* Logo */}
         <div className="text-center mb-8">
           <div className="inline-flex items-center gap-2 mb-4">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center shadow-lg shadow-primary/20">
-              <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
-            </div>
-            <span className="text-xl font-extrabold tracking-tight">MySchedule</span>
+            <img src="/logo.png" alt="LEAD Logo" className="w-16 h-16 object-contain mb-4 drop-shadow-xl hover:scale-110 transition-transform duration-300 animate-in zoom-in duration-500" />
+            <span className="text-2xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">LEAD</span>
           </div>
           <h1 className="text-2xl font-bold">Chào mừng trở lại! 👋</h1>
           <p className="text-muted-foreground text-sm mt-1">Đăng nhập để tiếp tục hành trình phát triển</p>

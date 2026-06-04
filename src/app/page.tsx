@@ -10,12 +10,8 @@ export default function LandingPage() {
       {/* Nav */}
       <nav className="relative z-10 flex items-center justify-between px-6 md:px-12 py-5 border-b border-border/50 backdrop-blur-sm bg-background/60">
         <div className="flex items-center gap-2.5">
-          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center shadow-lg shadow-primary/20">
-            <svg className="w-4.5 h-4.5 text-white w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
-          </div>
-          <span className="text-lg font-extrabold tracking-tight">MySchedule</span>
+          <img src="/logo.png" alt="LEAD Logo" className="w-14 h-14 object-contain drop-shadow-lg hover:scale-110 transition-transform duration-300" />
+          <span className="text-2xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">LEAD</span>
         </div>
         <div className="flex items-center gap-3">
           <a href="/auth/login" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors hidden sm:block">
@@ -129,7 +125,7 @@ export default function LandingPage() {
 
       {/* Footer */}
       <footer className="relative z-10 border-t border-border/50 py-6 text-center text-xs text-muted-foreground">
-        © 2026 MySchedule · Được xây dựng với ❤️ cho cộng đồng học tập Việt Nam
+        © 2026 LEAD · Được xây dựng với ❤️ cho cộng đồng học tập Việt Nam
       </footer>
     </div>
   );

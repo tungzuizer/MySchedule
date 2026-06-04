@@ -42,10 +42,10 @@ export default function CoachesPage() {
 
   return (
     <div className="space-y-10 animate-in fade-in slide-in-from-bottom-4 duration-500">
-      
+
       {/* ── Header ── */}
       <section className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-teal-600 via-emerald-600 to-cyan-700 p-8 md:p-12 text-white shadow-2xl">
-        <div className="absolute inset-0 opacity-10" style={{backgroundImage: "radial-gradient(circle at 20% 50%, white 1px, transparent 1px), radial-gradient(circle at 80% 20%, white 1px, transparent 1px)", backgroundSize: "60px 60px"}} />
+        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle at 20% 50%, white 1px, transparent 1px), radial-gradient(circle at 80% 20%, white 1px, transparent 1px)", backgroundSize: "60px 60px" }} />
         <div className="relative z-10 max-w-2xl">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/15 backdrop-blur text-xs font-semibold mb-4 border border-white/20">
             <span className="w-1.5 h-1.5 rounded-full bg-yellow-400 animate-pulse" />
@@ -68,11 +68,10 @@ export default function CoachesPage() {
           <button
             key={spec}
             onClick={() => setSelectedSpec(spec)}
-            className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-              selectedSpec === spec
-                ? "bg-primary text-primary-foreground shadow-md shadow-primary/30 scale-105"
-                : "bg-card border border-border text-muted-foreground hover:border-primary/50"
-            }`}
+            className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${selectedSpec === spec
+              ? "bg-primary text-primary-foreground shadow-md shadow-primary/30 scale-105"
+              : "bg-card border border-border text-muted-foreground hover:border-primary/50"
+              }`}
           >
             {spec === "all" ? "Tất cả" : SPECIALIZATION_LABELS[spec] || spec}
           </button>
@@ -109,7 +108,7 @@ export default function CoachesPage() {
                 {/* Rating & stats */}
                 <div className="flex items-center gap-4 mb-4">
                   <div className="flex items-center gap-1">
-                    {[1,2,3,4,5].map(i => (
+                    {[1, 2, 3, 4, 5].map(i => (
                       <span key={i} className={`text-sm ${i <= Math.round(coach.rating) ? "text-yellow-400" : "text-muted"}`}>★</span>
                     ))}
                     <span className="text-sm font-bold ml-1">{coach.rating}</span>
@@ -221,11 +220,10 @@ export default function CoachesPage() {
                           <button
                             key={day}
                             onClick={() => setSelectedDay(day)}
-                            className={`py-2.5 rounded-xl text-sm font-medium border transition-all ${
-                              selectedDay === day
-                                ? "bg-primary text-primary-foreground border-primary shadow-md"
-                                : "border-border hover:border-primary/50"
-                            }`}
+                            className={`py-2.5 rounded-xl text-sm font-medium border transition-all ${selectedDay === day
+                              ? "bg-primary text-primary-foreground border-primary shadow-md"
+                              : "border-border hover:border-primary/50"
+                              }`}
                           >
                             {day}
                           </button>

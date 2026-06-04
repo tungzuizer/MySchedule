@@ -31,13 +31,9 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
         <div className="container mx-auto px-4 h-16 flex items-center justify-between gap-4">
 
           {/* Logo */}
-          <a href="/dashboard" className="flex items-center gap-2 font-extrabold text-xl tracking-tight text-primary flex-shrink-0">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center">
-              <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
-            </div>
-            <span className="hidden sm:block">My Schedule</span>
+          <a href="/dashboard" className="flex items-center gap-3 font-extrabold text-2xl tracking-tight text-primary flex-shrink-0 group">
+            <img src="/logo.png" alt="LEAD Logo" className="w-12 h-12 object-contain drop-shadow-md group-hover:scale-110 transition-transform duration-300" />
+            <span className="hidden sm:block bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">LEAD</span>
           </a>
 
           {/* Desktop Nav */}
