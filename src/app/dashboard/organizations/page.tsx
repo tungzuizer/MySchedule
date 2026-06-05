@@ -64,8 +64,8 @@ export default function OrganizationsPage() {
             key={tab.key}
             onClick={() => setActiveTab(tab.key as any)}
             className={`px-5 py-2.5 text-sm font-semibold transition-all border-b-2 -mb-px ${activeTab === tab.key
-                ? "border-primary text-primary"
-                : "border-transparent text-muted-foreground hover:text-foreground"
+              ? "border-primary text-primary"
+              : "border-transparent text-muted-foreground hover:text-foreground"
               }`}
           >
             {tab.label}
@@ -95,8 +95,8 @@ export default function OrganizationsPage() {
                   key={f}
                   onClick={() => setFilter(f)}
                   className={`px-4 py-2 rounded-xl text-sm font-semibold whitespace-nowrap transition-all flex-shrink-0 ${filter === f
-                      ? "bg-primary text-primary-foreground shadow-md shadow-primary/20"
-                      : "bg-background border border-border text-muted-foreground hover:border-primary/40 hover:text-foreground"
+                    ? "bg-primary text-primary-foreground shadow-md shadow-primary/20"
+                    : "bg-background border border-border text-muted-foreground hover:border-primary/40 hover:text-foreground"
                     }`}
                 >
                   {f}
