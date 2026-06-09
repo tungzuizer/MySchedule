@@ -4,7 +4,7 @@
 export const MOCK_USER = {
   name: "Nguyễn Minh Tuấn",
   email: "tuan@example.com",
-  goal: "Lãnh đạo & Phát triển Sản phẩm",
+  goal: "LEADERSHIP",
   timeAvailable: "10 giờ/tuần",
   level: "Trung cấp",
   progress: 35,
@@ -17,18 +17,18 @@ export const MOCK_USER = {
 // SKILLS CATEGORIES
 // ============================================================
 export const SKILL_CATEGORIES = [
-  { id: "all", label: "Tất cả" },
-  { id: "leadership", label: "Lãnh đạo" },
-  { id: "community", label: "Cộng đồng" },
-  { id: "technical", label: "Kỹ thuật" },
-  { id: "professional", label: "Chuyên nghành" },
-  { id: "soft", label: "Kỹ năng mềm" },
+  { id: "all", label: "ALL" },
+  { id: "leadership", label: "LEADERSHIP" },
+  { id: "community", label: "COMMUNITY" },
+  { id: "technical", label: "TECHNICAL" },
+  { id: "professional", label: "PROFESSIONAL" },
+  { id: "soft", label: "SOFT SKILLS" },
 ];
 
 export const MOCK_SKILLS = [
   {
     id: "leadership",
-    title: "Lãnh đạo & Quản lý",
+    title: "LEADERSHIP",
     category: "leadership",
     icon: "🏆",
     description: "Phát triển tư duy lãnh đạo, quản lý đội nhóm hiệu quả và xây dựng tầm nhìn chiến lược cho tổ chức.",
@@ -47,7 +47,7 @@ export const MOCK_SKILLS = [
   },
   {
     id: "teamwork",
-    title: "Làm việc nhóm",
+    title: "TEAMWORK",
     category: "soft",
     icon: "🤝",
     description: "Xây dựng kỹ năng hợp tác, giao tiếp trong nhóm và giải quyết xung đột một cách chuyên nghiệp.",
@@ -66,7 +66,7 @@ export const MOCK_SKILLS = [
   },
   {
     id: "community",
-    title: "Kỹ năng cộng đồng",
+    title: "COMMUNITY",
     category: "community",
     icon: "🌱",
     description: "Học cách kết nối, xây dựng và phát triển cộng đồng. Tạo ra sức ảnh hưởng tích cực trong xã hội.",
@@ -85,7 +85,7 @@ export const MOCK_SKILLS = [
   },
   {
     id: "ai-tech",
-    title: "AI & Công nghệ",
+    title: "AI & TECHNOLOGY",
     category: "technical",
     icon: "🤖",
     description: "Nắm vững các công cụ AI, lập trình Python cơ bản và ứng dụng AI vào công việc thực tế.",
@@ -194,7 +194,7 @@ export const MOCK_COACHES = [
     rating: 4.9,
     reviewCount: 284,
     sessionCount: 1200,
-    hourlyRate: 500000,
+    hourlyRate: 50000,
     availability: ["Thứ 2", "Thứ 4", "Thứ 6"],
     organization: "org-mci",
     badge: "Top Coach",
@@ -211,7 +211,7 @@ export const MOCK_COACHES = [
     rating: 4.8,
     reviewCount: 196,
     sessionCount: 890,
-    hourlyRate: 400000,
+    hourlyRate: 40000,
     availability: ["Thứ 3", "Thứ 5", "Thứ 7"],
     organization: "org-luk",
     badge: "Nổi bật",
@@ -228,7 +228,7 @@ export const MOCK_COACHES = [
     rating: 4.7,
     reviewCount: 142,
     sessionCount: 560,
-    hourlyRate: 350000,
+    hourlyRate: 35000,
     availability: ["Thứ 2", "Thứ 5", "Chủ nhật"],
     organization: "org-makerviet",
     badge: "Mới",
@@ -245,7 +245,7 @@ export const MOCK_COACHES = [
     rating: 4.9,
     reviewCount: 312,
     sessionCount: 1450,
-    hourlyRate: 600000,
+    hourlyRate: 60000,
     availability: ["Thứ 3", "Thứ 6", "Thứ 7"],
     organization: "org-makerviet",
     badge: "Top Coach",
@@ -262,7 +262,7 @@ export const MOCK_COACHES = [
     rating: 4.9,
     reviewCount: 178,
     sessionCount: 720,
-    hourlyRate: 550000,
+    hourlyRate: 55000,
     availability: ["Thứ 2", "Thứ 4", "Thứ 7"],
     organization: "org-mci",
     badge: "Chuyên gia",
@@ -294,9 +294,9 @@ export const MOCK_ORGANIZATIONS = [
   },
   {
     id: "comp-fll",
-    name: "FIRST LEGO League",
+    name: "FIRST PROGRAM",
     shortName: "FLL",
-    description: "Cuộc thi LEGO Robotics dành cho học sinh THCS–THPT, rèn luyện tư duy giải quyết vấn đề, giao tiếp nhóm và thuyết trình trước hội đồng.",
+    description: "Cuộc thi FIRST PROGRAM dành cho học sinh THCS–THPT, rèn luyện tư duy giải quyết vấn đề, giao tiếp nhóm và thuyết trình trước hội đồng.",
     image: "https://images.unsplash.com/photo-1561557944-6e7860d1a7eb?auto=format&fit=crop&w=800&q=80",
     skills: ["Problem Solving", "Giao tiếp", "Thuyết trình", "Sáng tạo"],
     website: "https://firstlegoleague.org",
